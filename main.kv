@@ -1,0 +1,1416 @@
+Login:
+    Home:
+    Bein_fhd:
+    Bein_hd:
+    Bein_sd:
+    SSC_sport:
+    AD_sport:
+    Bein_sport1_fhd_player:
+    Bein_sport2_fhd_player:
+    Bein_sport3_fhd_player:
+    Bein_sport4_fhd_player:
+    Bein_sport5_fhd_player:
+    Bein_sport6_fhd_player:
+    Bein_sport7_fhd_player:
+    Bein_sport8_fhd_player:
+    Bein_sport9_fhd_player:
+    Bein_sport1_hd_player:
+    Bein_sport2_hd_player:
+    Bein_sport3_hd_player:
+    Bein_sport4_hd_player:
+    Bein_sport5_hd_player:
+    Bein_sport6_hd_player:
+    Bein_sport7_hd_player:
+    Bein_sport8_hd_player:
+    Bein_sport9_hd_player:
+    Bein_sport1_sd_player:
+    Bein_sport2_sd_player:
+    Bein_sport3_sd_player:
+    Bein_sport4_sd_player:
+    Bein_sport5_sd_player:
+    Bein_sport6_sd_player:
+    Bein_sport7_sd_player:
+    Bein_sport8_sd_player:
+    Bein_sport9_sd_player:
+    SSC_sport1_player:
+    SSC_sport2_player:
+    SSC_sport3_player:
+    SSC_sport4_player:
+    SSC_sport5_player:
+    SSC_sport_extra1_player:
+    SSC_sport_extra2_player:
+    SSC_sport_extra3_player:
+    SSC_sport_news_player:
+    AD_sport1_sd_player:
+    AD_sport2_sd_player:
+    AD_sport1_hd_player:
+    AD_sport2_hd_player:
+    AD_sport1_4k_player:
+    AD_sport2_4k_player:
+<Home>:
+    name:"home"
+    Image:
+        source:'ball5.png'
+        pos_hint:{'center_x':0.50,'center_y':0.88}
+        size_hint:(0.65,0.4) 
+    MDIconButton:
+        icon:"home"
+        size_hint:(0.05,0.05)
+        text_color:(109/255, 60/255, 205/255,255/255)
+        pos_hint:{'center_x':0.12,'center_y':0.95}
+    MDIconButton:
+        icon:"palette"
+        size_hint:(0.05,0.05)
+        
+        text_color:(109/255, 60/255, 205/255,255/255)
+        pos_hint:{'center_x':0.92,'center_y':0.95}
+        on_press:
+            root.change_style()
+
+    MDRaisedButton:
+        text:'Bein sport FHD'
+        pos_hint:{'center_x':0.50,'center_y':0.73}
+        font_size:20
+        size_hint:(0.7,0.12)
+        on_release:
+            app.root.current="bein_fhd"
+            root.manager.transition.direction='right'
+            
+    MDRaisedButton:
+        text:'Bein sport HD'
+        pos_hint:{'center_x':0.50,'center_y':0.58}
+        font_size:20
+        size_hint:(0.7,0.12)
+        on_release:
+            app.root.current="bein_hd"
+            root.manager.transition.direction='left'
+            
+    MDRaisedButton:
+        text:'Bein sport SD'
+        pos_hint:{'center_x':0.5,'center_y':0.43}
+        font_size:20
+        size_hint:(0.7,0.12)
+        on_release:
+            app.root.current="bein_sd"
+            root.manager.transition.direction='up'
+            
+    MDRaisedButton:
+        text:'SSC SPORTS'
+        pos_hint:{'center_x':0.5,'center_y':0.28}
+        font_size:20
+        size_hint:(0.7,0.12)
+        on_release:
+            app.root.current="ssc_sport"
+            root.manager.transition.direction='down'
+            
+    MDRaisedButton:
+        text:'AD SPORTS'
+        pos_hint:{'center_x':0.5,'center_y':0.13}
+        font_size:20
+        size_hint:(0.7,0.12)
+        on_release:
+            app.root.current="ad_sport"
+            root.manager.transition.direction='right'
+<Bein_fhd>:
+    name:"bein_fhd"
+    MDLabel:
+        text:'BEIN SPORTS FHD'
+        pos_hint:{'center_x':0.7,'center_y':0.95}
+        font_size:30
+        color:(109/255,60/255,206/255)
+        size_hint:(1,0.03)
+    MDIconButton:
+        icon:'back.png'
+        size_hint:(0.06,0.06)
+        theme_text_color:"Custom"
+        color:(109/255,60/255,206/255)
+        pos_hint:{'center_x':0.12,'center_y':0.95}
+        on_release:
+            app.root.current="home"
+            root.manager.transition.direction='left'
+    MDRaisedButton:
+        text:'Bein sport\n 1FHD'
+        pos_hint:{'center_x':0.20,'center_y':0.80}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_fhd_1_player"   
+    MDRaisedButton:
+        text:'Bein sport\n 2 FHD'
+        pos_hint:{'center_x':0.5,'center_y':0.80}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_fhd_2_player"
+            
+    MDRaisedButton:
+        text:'Bein sport\n 3 FHD'
+        pos_hint:{'center_x':0.8,'center_y':0.80}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_fhd_3_player"
+            
+    MDRaisedButton:
+        text:'Bein sport\n 4 FHD'
+        pos_hint:{'center_x':0.2,'center_y':0.6}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_fhd_4_player"
+        
+    MDRaisedButton:
+        text:'Bein sport\n 5 FHD'
+        pos_hint:{'center_x':0.5,'center_y':0.6}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_fhd_5_player"
+        
+    MDRaisedButton:
+        text:'Bein sport\n 6 FHD'
+        pos_hint:{'center_x':0.8,'center_y':0.6}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_fhd_6_player"
+            
+    MDRaisedButton:
+        text:'Bein sport\n 7 FHD'
+        pos_hint:{'center_x':0.20,'center_y':0.4}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_fhd_7_player"
+            
+    MDRaisedButton:
+        text:'Bein sport\n 8 FHD'
+        pos_hint:{'center_x':0.5,'center_y':0.4}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_fhd_8_player"
+            
+    MDRaisedButton:
+        text:'Bein sport\n 9 FHD'
+        pos_hint:{'center_x':0.8,'center_y':0.4}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_fhd_9_player"
+            
+    Image:
+        source:'bein-sports.png'
+        pos_hint:{'center_x':0.5,'center_y':0.2}
+        size_hint:(0.7,0.4)
+<Bein_hd>:
+    name:"bein_hd"
+    MDLabel:
+        text:'BEIN SPORTS HD'
+        pos_hint:{'center_x':0.7,'center_y':0.95}
+        font_size:30
+        color:(109/255,60/255,206/255)
+        size_hint:(1,0.03)
+    MDIconButton:
+        icon:"back.png"
+        size_hint:(0.06,0.06)
+        theme_text_color:"Custom"
+        text_color:(195/255,110/255,90/255)
+        color:(109/255,60/255,206/255)
+        pos_hint:{'center_x':0.12,'center_y':0.95}
+        on_release:
+            app.root.current="home"
+            root.manager.transition.direction='right'
+    MDRaisedButton:
+        text:'Bein sport\n 1 HD'
+        pos_hint:{'center_x':0.20,'center_y':0.80}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_hd_1_player"   
+    MDRaisedButton:
+        text:'Bein sport\n 2 HD'
+        pos_hint:{'center_x':0.5,'center_y':0.80}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_hd_2_player"
+            
+    MDRaisedButton:
+        text:'Bein sport\n 3 HD'
+        pos_hint:{'center_x':0.8,'center_y':0.80}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_hd_3_player"
+            
+    MDRaisedButton:
+        text:'Bein sport\n 4 HD'
+        pos_hint:{'center_x':0.2,'center_y':0.6}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_hd_4_player"
+        
+    MDRaisedButton:
+        text:'Bein sport\n 5 HD'
+        pos_hint:{'center_x':0.5,'center_y':0.6}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_hd_5_player"
+        
+    MDRaisedButton:
+        text:'Bein sport\n 6 HD'
+        pos_hint:{'center_x':0.8,'center_y':0.6}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_hd_6_player"
+            
+    MDRaisedButton:
+        text:'Bein sport\n 7 HD'
+        pos_hint:{'center_x':0.20,'center_y':0.4}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_hd_7_player"
+            
+    MDRaisedButton:
+        text:'Bein sport\n 8 HD'
+        pos_hint:{'center_x':0.5,'center_y':0.4}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_hd_8_player"
+            
+    MDRaisedButton:
+        text:'Bein sport\n 9 HD'
+        pos_hint:{'center_x':0.8,'center_y':0.4}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_hd_9_player"
+            
+    Image:
+        source:'bein-sports.png'
+        pos_hint:{'center_x':0.5,'center_y':0.2}
+        size_hint:(0.7,0.4)
+<Bein_sd>:
+    name:"bein_sd"
+    MDLabel:
+        text:'BEIN SPORTS SD'
+        pos_hint:{'center_x':0.7,'center_y':0.95}
+        font_size:30
+        color:(109/255,60/255,206/255)
+        size_hint:(1,0.03)
+    MDIconButton:
+        icon:"back.png"
+        size_hint:(0.06,0.06)
+        theme_text_color:"Custom"
+        text_color:(195/255,110/255,90/255)
+        color:(109/255,60/255,206/255)
+        pos_hint:{'center_x':0.12,'center_y':0.95}
+        on_release:
+            app.root.current="home"
+            root.manager.transition.direction='down'
+    MDRaisedButton:
+        text:'Bein sport\n 1 SD'
+        pos_hint:{'center_x':0.20,'center_y':0.80}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_sd_1_player"   
+    MDRaisedButton:
+        text:'Bein sport\n 2 SD'
+        pos_hint:{'center_x':0.5,'center_y':0.80}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_sd_2_player"
+            
+    MDRaisedButton:
+        text:'Bein sport\n 3 SD'
+        pos_hint:{'center_x':0.8,'center_y':0.80}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_sd_3_player"
+            
+    MDRaisedButton:
+        text:'Bein sport\n 4 SD'
+        pos_hint:{'center_x':0.2,'center_y':0.6}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_sd_4_player"
+        
+    MDRaisedButton:
+        text:'Bein sport\n 5 SD'
+        pos_hint:{'center_x':0.5,'center_y':0.6}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_sd_5_player"
+        
+    MDRaisedButton:
+        text:'Bein sport\n 6 SD'
+        pos_hint:{'center_x':0.8,'center_y':0.6}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_sd_6_player"
+            
+    MDRaisedButton:
+        text:'Bein sport\n 7 SD'
+        pos_hint:{'center_x':0.20,'center_y':0.4}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_sd_7_player"
+            
+    MDRaisedButton:
+        text:'Bein sport\n 8 SD'
+        pos_hint:{'center_x':0.5,'center_y':0.4}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_sd_8_player"
+            
+    MDRaisedButton:
+        text:'Bein sport\n 9 SD'
+        pos_hint:{'center_x':0.8,'center_y':0.4}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="bein_sd_9_player"
+            
+    Image:
+        source:'bein-sports.png'
+        pos_hint:{'center_x':0.5,'center_y':0.2}
+        size_hint:(0.7,0.4)
+<SSC_sport>:
+    name:"ssc_sport"
+    MDLabel:
+        text:'SSC SPORTS'
+        pos_hint:{'center_x':0.8,'center_y':0.95}
+        font_size:30
+        color:(109/255,60/255,206/255)
+        size_hint:(1,0.03)
+    MDIconButton:
+        icon:"back.png"
+        size_hint:(0.06,0.06)
+        theme_text_color:"Custom"
+        text_color:(195/255,110/255,90/255)
+        color:(109/255,60/255,206/255)
+        pos_hint:{'center_x':0.12,'center_y':0.95}
+        on_release:
+            app.root.current="home"
+            root.manager.transition.direction='up'
+    MDRaisedButton:
+        text:'SSC sport\n 1'
+        pos_hint:{'center_x':0.20,'center_y':0.80}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="ssc_sport_1_player"   
+    MDRaisedButton:
+        text:'SSC sport\n 2'
+        pos_hint:{'center_x':0.5,'center_y':0.80}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="ssc_sport_2_player"
+            
+    MDRaisedButton:
+        text:'SSC sport\n 3 '
+        pos_hint:{'center_x':0.8,'center_y':0.80}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="ssc_sport_3_player"
+            
+    MDRaisedButton:
+        text:'SSC sport\n 4'
+        pos_hint:{'center_x':0.2,'center_y':0.6}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="ssc_sport_4_player"
+        
+    MDRaisedButton:
+        text:'SSC sport\n 5 '
+        pos_hint:{'center_x':0.5,'center_y':0.6}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="ssc_sport_5_player"
+            
+    MDRaisedButton:
+        text:'SSC sport\n Extra 1'
+        pos_hint:{'center_x':0.8,'center_y':0.6}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="ssc_sport_1_extra_player"
+            
+    MDRaisedButton:
+        text:'SSC sport\n Extra 2'
+        pos_hint:{'center_x':0.2,'center_y':0.4}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="ssc_sport_2_extra_player"
+            
+    MDRaisedButton:
+        text:'SSC sport\n Extra 3'
+        pos_hint:{'center_x':0.5,'center_y':0.4}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="ssc_sport_3_extra_player"
+    MDRaisedButton:
+        text:'SSC sport\n News'
+        pos_hint:{'center_x':0.8,'center_y':0.4}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="ssc_sport_news_player"        
+            
+    Image:
+        source:'ssc2.png'
+        pos_hint:{'center_x':0.5,'center_y':0.2}
+        size_hint:(.7,.4)
+<AD_sport>:
+    name:"ad_sport" 
+    MDLabel:
+        text:'AD SPORTS'
+        pos_hint:{'center_x':0.8,'center_y':0.95}
+        font_size:30
+        color:(109/255,60/255,206/255)
+        size_hint:(1,0.03)
+    MDIconButton:
+        icon:"back.png"
+        size_hint:(0.06,0.06)
+        theme_text_color:"Custom"
+        text_color:(195/255,110/255,90/255)
+        color:(109/255,60/255,206/255)
+        pos_hint:{'center_x':0.12,'center_y':0.95}
+        on_release:
+            app.root.current="home"
+            root.manager.transition.direction='left'
+    MDRaisedButton:
+        text:'AD sport\n 1 SD '
+        pos_hint:{'center_x':0.20,'center_y':0.80}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="ad_sport_1_player"   
+    MDRaisedButton:
+        text:'AD sport\n 2 SD'
+        pos_hint:{'center_x':0.5,'center_y':0.80}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="ad_sport_2_player"
+            
+    MDRaisedButton:
+        text:'AD sport\n 1 HD'
+        pos_hint:{'center_x':0.8,'center_y':0.80}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="ad_sport_1_hd_player"
+            
+    MDRaisedButton:
+        text:'AD sport\n 2 HD'
+        pos_hint:{'center_x':0.2,'center_y':0.6}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="ad_sport_2_hd_player"
+        
+    MDRaisedButton:
+        text:'AD sport\n 1 4K '
+        pos_hint:{'center_x':0.5,'center_y':0.6}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="ad_sport_1_4k_player"
+            
+    MDRaisedButton:
+        text:'Ad sport\n 2 4K'
+        pos_hint:{'center_x':0.8,'center_y':0.6}
+        font_size:15
+        size_hint:(0.08,0.14)
+        on_release:
+            app.root.current="ad_sport_2_4k_player"       
+            
+    Image:
+        source:'ad_sport.png'
+        pos_hint:{'center_x':0.5,'center_y':0.2}
+        size_hint:(.7,.4) 
+<Bein_sport1_fhd_player>: 
+    name:"bein_fhd_1_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_fhd" 
+                root.manager.transition.direction='left'  
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332847.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<Bein_sport2_fhd_player>:
+    name:"bein_fhd_2_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_fhd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332800.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True 
+<Bein_sport3_fhd_player>:
+    name:"bein_fhd_3_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_fhd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332799.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True 
+<Bein_sport4_fhd_player>:
+    name:"bein_fhd_4_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_fhd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332798.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True 
+<Bein_sport5_fhd_player>:
+    name:"bein_fhd_5_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_fhd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332797.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True  
+<Bein_sport6_fhd_player>:
+    name:"bein_fhd_6_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_fhd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332796.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True  
+<Bein_sport7_fhd_player>:
+    name:"bein_fhd_7_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_fhd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332795.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True 
+<Bein_sport8_fhd_player>:
+    name:"bein_fhd_8_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_fhd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332794.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<Bein_sport9_fhd_player>:
+    name:"bein_fhd_9_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_fhd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332793.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True 
+<Bein_sport1_hd_player>:
+    name:"bein_hd_1_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_hd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332791.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<Bein_sport2_hd_player>:
+    name:"bein_hd_2_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_hd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332790.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<Bein_sport3_hd_player>:
+    name:"bein_hd_3_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_hd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332788.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<Bein_sport4_hd_player>:
+    name:"bein_hd_4_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_hd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332787.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<Bein_sport5_hd_player>:
+    name:"bein_hd_5_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_hd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332786.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<Bein_sport6_hd_player>:
+    name:"bein_hd_6_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_hd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332785.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<Bein_sport7_hd_player>:
+    name:"bein_hd_7_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_hd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332784.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<Bein_sport8_hd_player>:
+    name:"bein_hd_8_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_hd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332783.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<Bein_sport9_hd_player>:
+    name:"bein_hd_9_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_hd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332782.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True 
+<Bein_sport1_sd_player>:
+    name:"bein_sd_1_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_sd" 
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/330472.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<Bein_sport2_sd_player>:
+    name:"bein_sd_2_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.04,0.04)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_sd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332748.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<Bein_sport3_sd_player>:
+    name:"bein_sd_3_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.04,0.04)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_sd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332770.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<Bein_sport4_sd_player>:
+    name:"bein_sd_4_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.04,0.04)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_sd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332771.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<Bein_sport5_sd_player>:
+    name:"bein_sd_5_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.04,0.04)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_sd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332772.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<Bein_sport6_sd_player>:
+    name:"bein_sd_6_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.04,0.04)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_sd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332773.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<Bein_sport7_sd_player>:
+    name:"bein_sd_7_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.04,0.04)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_sd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332774.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<Bein_sport8_sd_player>:
+    name:"bein_sd_8_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.04,0.04)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_sd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332775.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<Bein_sport9_sd_player>:
+    name:"bein_sd_9_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.04,0.04)
+            pos_hint:{'center_x':0.1,'center_y':0.95}
+            on_release:
+                app.root.current="bein_sd"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332776.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True 
+<SSC_sport1_player>:
+    name:"ssc_sport_1_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.055,'center_y':0.95}
+            on_release:
+                app.root.current="ssc_sport"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            id:"video"
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/354515.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<SSC_sport2_player>:
+    name:"ssc_sport_2_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.055,'center_y':0.95}
+            on_release:
+                app.root.current="ssc_sport"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            id:"video"
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/354516.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<SSC_sport3_player>:
+    name:"ssc_sport_3_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.055,'center_y':0.95}
+            on_release:
+                app.root.current="ssc_sport"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            id:"video"
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/354517.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<SSC_sport4_player>:
+    name:"ssc_sport_4_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.055,'center_y':0.95}
+            on_release:
+                app.root.current="ssc_sport"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            id:"video"
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/354518.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<SSC_sport5_player>:
+    name:"ssc_sport_5_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.055,'center_y':0.95}
+            on_release:
+                app.root.current="ssc_sport"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            id:"video"
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/354519.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<SSC_sport_extra1_player>:
+    name:"ssc_sport_1_extra_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.055,'center_y':0.95}
+            on_release:
+                app.root.current="ssc_sport"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            id:"video"
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/354520.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<SSC_sport_extra2_player>:
+    name:"ssc_sport_2_extra_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.055,'center_y':0.95}
+            on_release:
+                app.root.current="ssc_sport"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            id:"video"
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/354521.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<SSC_sport_extra3_player>:
+    name:"ssc_sport_3_extra_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.055,'center_y':0.95}
+            on_release:
+                app.root.current="ssc_sport"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            id:"video"
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/354522.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<SSC_sport_news_player>:
+    name:"ssc_sport_news_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.055,'center_y':0.95}
+            on_release:
+                app.root.current="ssc_sport"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            id:"video"
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/354514.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True 
+<AD_sport1_sd_player>:
+    name:"ad_sport_1_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.055,'center_y':0.95}
+            on_release:
+                app.root.current="ad_sport"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            id:"video"
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332964.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<AD_sport2_sd_player>:
+    name:"ad_sport_2_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.055,'center_y':0.95}
+            on_release:
+                app.root.current="ad_sport"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            id:"video"
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332965.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<AD_sport1_hd_player>:
+    name:"ad_sport_1_hd_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.055,'center_y':0.95}
+            on_release:
+                app.root.current="ad_sport"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            id:"video"
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332966.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<AD_sport2_hd_player>:
+    name:"ad_sport_2_hd_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.055,'center_y':0.95}
+            on_release:
+                app.root.current="ad_sport"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            id:"video"
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332967.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<AD_sport1_4k_player>:
+    name:"ad_sport_1_4k_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.055,'center_y':0.95}
+            on_release:
+                app.root.current="ad_sport"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            id:"video"
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332968.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True
+<AD_sport2_4k_player>:
+    name:"ad_sport_2_4k_player"
+    BoxLayout:
+        orientation:"vertical"
+        MDIconButton:
+            icon:"back.png"
+            size_hint:(0.05,0.05)
+            pos_hint:{'center_x':0.055,'center_y':0.95}
+            on_release:
+                app.root.current="ad_sport"
+                root.manager.transition.direction='left'
+        VideoPlayer:
+            id:"video"
+            size_hint_y:1
+            size_hint_x:1
+            source:'http://4ktv.live:80/live/238264274154/547978546593/332969.ts'
+            state:'stop'
+            options: {'eos': 'loop'}
+            allow_stretch:True
+            fullscreen:True
+            allow_fullscreen:True                                                      
+            
+    
+    
+            
+          
+
+
+
+    
