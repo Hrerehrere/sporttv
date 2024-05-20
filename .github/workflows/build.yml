@@ -1,25 +1,42 @@
-name: Latest blog post length
+name: CI
 on:
-  schedule:
-    - cron: '*/5 * * * *'
-  workflow_dispatch:
+  push:
+    branches: [ main ]
+
 jobs:
-  update-readme-with-blog:
-    name: Update this repo's README with latest blog posts
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-20.04
+
     steps:
       - uses: actions/checkout@v2
-      - name: Insatall jq
-        run: sudo apt install -y jq
-      - uses: gautamkrishnar/blog-post-workflow@master
+
+     used to cache dependencies with a timeout
+      - name: Get Date
+        id: get-date
+        run: |
+          echo "::set-output name=date::$(/bin/date -u "+%Y%m%d")"
+        shell: bash
+
+      - name: Cache Buildozer global directory
+        uses: actions/cache@v2
         with:
-          commit_message: "Updated readme with the latest blogposts"
-          feed_list: "https://esteetey.dev/rss.xml"
-          max_post_count: 1000
-          output_only: true
-      - name: Saves count as an output
-        id: count-step
-        run: echo "::set-output name=articles_length::$(jq '. | length' /tmp/blog_post_workflow_output.json)"
-      - name: Prints count
-        run: echo ${{ steps.count-step.outputs.articles_length }}
- 
+          path: .buildozer_global
+          key: buildozer-global-${{ hashFiles('buildozer.spec') }} # Replace with your path
+
+      - uses: actions/cache@v2
+        with:
+          path: .buildozer
+          key: ${{ runner.os }}-${{ steps.get-date.outputs.date }}-${{ hashFiles('buildozer.spec') }}
+
+      - name: Build with Buildozer
+        uses: ArtemSBulgakov/buildozer-action@v1
+        id: buildozer
+        with:
+          command: buildozer android debug
+          buildozer_version: stable
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: package
+          path: ${{ steps.buildozer.outputs.filename }}
